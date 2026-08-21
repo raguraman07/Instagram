@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Grand+Hotel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E4405F'><path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z'/></svg>">
+</head>
+<body>
+    <!-- Light / Dark Theme Toggle Button -->
+    <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light mode" title="Switch Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+        </svg>
+        <svg class="moon-icon hidden" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12.3 2c.43 0 .77.35.7.78-.62 3.84 1.5 7.6 5.17 9.06.41.16.58.64.38 1.03A9.97 9.97 0 0 1 9.5 19c-5.52 0-10-4.48-10-10 0-4.08 2.45-7.59 5.96-9.1.39-.17.84.02.97.41.05.15.07.31.07.47v.22z"/>
+        </svg>
+    </button>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <div class="content-wrapper">
+            
+            <!-- Left Side Phone Frame Showcase (Desktop) -->
+            <div class="phones-container">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <img src="assets/slide1.jpg" alt="Instagram Feed Screen" class="slide active">
+                        <img src="assets/slide2.jpg" alt="Instagram Profile Screen" class="slide">
+                        <img src="assets/slide3.jpg" alt="Instagram Reels Screen" class="slide">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Auth Container -->
+            <div class="auth-container">
+                
+                <!-- Main Login Card -->
+                <div class="card login-card" id="loginCard">
+                    <!-- Instagram Logo / Wordmark -->
+                    <div class="logo-wrapper">
+                        <svg class="instagram-wordmark" viewBox="0 0 175 51" width="175" height="51" fill="currentColor">
+                            <path d="M11 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" transform="scale(1.3) translate(2, 2)"/>
+                        </svg>
+                        <h1 class="brand-text">Instagram</h1>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form id="loginForm" class="auth-form" autocomplete="off" novalidate>
+                        
+                        <!-- Username / Email Field -->
+                        <div class="field-wrapper">
+                            <input 
+                                type="text" 
+                                id="usernameInput" 
+                                class="form-input" 
+                                required 
+                                aria-label="Phone number, username, or email" 
+                                autocomplete="username"
+                                spellcheck="false"
+                            >
+                            <label for="usernameInput" class="form-label">Phone number, username, or email</label>
+                            <span class="clear-btn hidden" id="clearUsernameBtn" aria-label="Clear field">&times;</span>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="field-wrapper">
+                            <input 
+                                type="password" 
+                                id="passwordInput" 
+                                class="form-input" 
+                                required 
+                                aria-label="Password"
+                                autocomplete="current-password"
+                            >
+                            <label for="passwordInput" class="form-label">Password</label>
+                            <button type="button" class="pw-toggle-btn hidden" id="pwToggleBtn" aria-label="Show password">Show</button>
+                        </div>
+
+                        <!-- Log In Button -->
+                        <button type="submit" class="btn btn-primary" id="loginBtn" disabled>
+                            <span class="btn-text">Log in</span>
+                            <span class="spinner hidden" id="loginSpinner"></span>
+                        </button>
+                    </form>
+
+                    <!-- OR Divider -->
+                    <div class="divider">
+                        <div class="divider-line"></div>
+                        <span class="divider-text">OR</span>
+                        <div class="divider-line"></div>
+                    </div>
+
+                    <!-- Alternative Authentication: Facebook Login -->
+                    <div class="facebook-login-wrapper">
+                        <button type="button" class="btn-facebook" id="fbLoginBtn">
+                            <svg class="fb-icon" viewBox="0 0 24 24" width="18" height="18">
+                                <path fill="#385185" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            <span class="fb-btn-text">Log in with Facebook</span>
+                        </button>
+                    </div>
+
+                    <!-- Forgot Password Link -->
+                    <div class="forgot-password-wrapper">
+                        <a href="#" class="forgot-link" id="forgotPasswordLink">Forgot password?</a>
+                    </div>
+                </div>
+
+                <!-- Sign Up Prompt Card -->
+                <div class="card prompt-card" id="signupPromptCard">
+                    <p>Don't have an account? <a href="#" class="accent-link" id="signupLink">Sign up</a></p>
+                </div>
+
+                <!-- Sign Up Card (Hidden initially, toggled dynamically) -->
+                <div class="card signup-card hidden" id="signupCard">
+                    <div class="logo-wrapper">
+                        <h1 class="brand-text">Instagram</h1>
+                        <p class="signup-subtitle">Sign up to see photos and videos from your friends.</p>
+                    </div>
+
+                    <button type="button" class="btn btn-facebook-solid" id="fbSignupBtn">
+                        <svg class="fb-icon-white" viewBox="0 0 24 24" width="16" height="16" fill="#ffffff">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                        Log in with Facebook
+                    </button>
+
+                    <div class="divider">
+                        <div class="divider-line"></div>
+                        <span class="divider-text">OR</span>
+                        <div class="divider-line"></div>
+                    </div>
+
+                    <form id="signupForm" class="auth-form" autocomplete="off">
+                        <div class="field-wrapper">
+                            <input type="text" id="signupContactInput" class="form-input" required>
+                            <label for="signupContactInput" class="form-label">Mobile Number or Email</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="text" id="signupFullNameInput" class="form-input" required>
+                            <label for="signupFullNameInput" class="form-label">Full Name</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="text" id="signupUsernameInput" class="form-input" required>
+                            <label for="signupUsernameInput" class="form-label">Username</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="password" id="signupPasswordInput" class="form-input" required>
+                            <label for="signupPasswordInput" class="form-label">Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="signupBtn">Sign up</button>
+                    </form>
+                    
+                    <p class="terms-notice">
+                        People who use our service may have uploaded your contact information to Instagram. <a href="#">Learn More</a>
+                    </p>
+                </div>
+
+                <!-- Back to Login Card (Hidden initially) -->
+                <div class="card prompt-card hidden" id="loginPromptCard">
+                    <p>Have an account? <a href="#" class="accent-link" id="showLoginLink">Log in</a></p>
+                </div>
+
+                <!-- App Download Section -->
+                <div class="app-download-container">
+                    <p class="download-text">Get the app.</p>
+                    <div class="store-badges">
+                        <a href="https://play.google.com/store" target="_blank" rel="noopener" class="badge-btn google-play-badge" aria-label="Get it on Google Play">
+                            <svg viewBox="0 0 135 40" width="135" height="40">
+                                <rect width="135" height="40" rx="6" fill="#000000"/>
+                                <g transform="translate(10, 8)">
+                                    <!-- Google Play Triangle Icon -->
+                                    <path d="M1.3 0.8 C0.8 1.3 0.5 2.1 0.5 3.1 L0.5 20.9 C0.5 21.9 0.8 22.7 1.3 23.2 L1.4 23.3 L11.4 13.3 L11.4 11.7 L1.4 1.7 Z" fill="#00E676"/>
+                                    <path d="M15.3 17.2 L11.4 13.3 L11.4 11.7 L15.3 7.8 L15.4 7.9 L20.1 10.6 C21.4 11.3 21.4 12.7 20.1 13.4 L15.4 16.1 Z" fill="#FFC107"/>
+                                    <path d="M15.4 17.1 L11.4 13.1 L1.3 23.2 C1.8 23.7 2.6 23.8 3.5 23.3 L15.4 17.1 Z" fill="#FF3D00"/>
+                                    <path d="M15.4 6.9 L3.5 0.7 C2.6 0.2 1.8 0.3 1.3 0.8 L11.4 10.9 L15.4 6.9 Z" fill="#00B0FF"/>
+                                </g>
+                                <text x="42" y="16" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="8" font-weight="500" letter-spacing="0.5">GET IT ON</text>
+                                <text x="42" y="28" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="13" font-weight="700">Google Play</text>
+                            </svg>
+                        </a>
+                        <a href="https://www.microsoft.com/store" target="_blank" rel="noopener" class="badge-btn ms-store-badge" aria-label="Get it from Microsoft">
+                            <svg viewBox="0 0 135 40" width="135" height="40">
+                                <rect width="135" height="40" rx="6" fill="#000000"/>
+                                <g transform="translate(12, 10)">
+                                    <rect x="0" y="0" width="9" height="9" fill="#F25022"/>
+                                    <rect x="10" y="0" width="9" height="9" fill="#7FBA00"/>
+                                    <rect x="0" y="10" width="9" height="9" fill="#00A4EF"/>
+                                    <rect x="10" y="10" width="9" height="9" fill="#FFB900"/>
+                                </g>
+                                <text x="40" y="16" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="8" font-weight="500" letter-spacing="0.5">Get it from</text>
+                                <text x="40" y="28" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">Microsoft</text>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Meta</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Jobs</a>
+            <a href="#">Help</a>
+            <a href="#">API</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Locations</a>
+            <a href="#">Instagram Lite</a>
+            <a href="#">Threads</a>
+            <a href="#">Contact Uploading & Non-Users</a>
+            <a href="#">Meta Verified</a>
+        </div>
+        <div class="footer-bottom">
+            <div class="language-select-wrapper">
+                <select id="languageSelect" class="language-select" aria-label="Switch Language">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="ja">日本語</option>
+                    <option value="pt">Português (Brasil)</option>
+                </select>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
+                </svg>
+            </div>
+            <span class="copyright">&copy; 2026 Instagram from Meta</span>
+        </div>
+    </footer>
+
+    <!-- Facebook SSO Modal -->
+    <div class="modal-overlay hidden" id="fbModal" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <svg viewBox="0 0 24 24" width="32" height="32">
+                    <path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <h2>Log in with Facebook</h2>
+                <button type="button" class="close-modal-btn" id="closeFbModalBtn" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Instagram is requesting access to your Facebook account profile and email address.</p>
+                <div class="fb-user-preview">
+                    <div class="fb-avatar">FB</div>
+                    <div class="fb-user-info">
+                        <strong>Demo Facebook User</strong>
+                        <span>demo.user@example.com</span>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-facebook-solid" id="confirmFbLoginBtn">Continue as Demo User</button>
+                <button type="button" class="btn btn-secondary" id="cancelFbLoginBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal-overlay hidden" id="forgotModal" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="lock-icon-circle">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0110 0v4"/>
+                    </svg>
+                </div>
+                <h2>Trouble logging in?</h2>
+                <button type="button" class="close-modal-btn" id="closeForgotModalBtn" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">Enter your email, phone, or username and we'll send you a link to get back into your account.</p>
+                <div class="field-wrapper">
+                    <input type="text" id="forgotInput" class="form-input" required placeholder="Email, Phone, or Username">
+                </div>
+                <button type="button" class="btn btn-primary" id="sendResetBtn">Send login link</button>
+                <div class="divider">
+                    <div class="divider-line"></div>
+                    <span class="divider-text">OR</span>
+                    <div class="divider-line"></div>
+                </div>
+                <a href="#" class="accent-link text-center block" id="createNewAccountLink">Create new account</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
